@@ -5,7 +5,7 @@ struct SecondaryTitle: View {
     
     var body: some View {
         Text(title)
-            .foregroundColor(Color("secondaryTitleColor"))
+            .foregroundColor(Color("SecondaryTitleColor"))
     }
 }
 

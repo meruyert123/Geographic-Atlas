@@ -17,7 +17,7 @@ struct CountryDetailCell: View {
             if let detail = detail {
                 VStack(alignment: .leading, spacing: 4) {
                     SecondaryTitle(title: title)
-                    Title(title: detail)
+                    Text(detail)
                 }
             }
             else {

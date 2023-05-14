@@ -9,23 +9,24 @@ struct ContentCell: View {
         VStack(alignment: .leading, spacing: 12)  {
             HStack {
                 if country.flags?.png != nil {
-                    AsyncImage(url: URL(string: country.flags!.png)) { phase in
-                        if let image = phase.image {
-                            image.resizable()
-                                .scaledToFill()
-                                .cornerRadius(8)
-                                .frame(width: 82, height: 48)
-                                .clipped()
-                        }
-                        else if phase.error != nil {
-                            Color.red
-                        }
-                        else {
-                            ProgressView()
-                                .cornerRadius(8)
-                                .frame(width: 82, height: 48)
-                        }
-                    }
+                    ImageLoadingView(url: country.flags!.png)
+//                    AsyncImage(url: URL(string: country.flags!.png)) { phase in
+//                        if let image = phase.image {
+//                            image.resizable()
+//                                .scaledToFill()
+//                                .cornerRadius(8)
+//                                .frame(width: 82, height: 48)
+//                                .clipped()
+//                        }
+//                        else if phase.error != nil {
+//                            Color.red
+//                        }
+//                        else {
+//                            ProgressView()
+//                                .cornerRadius(8)
+//                                .frame(width: 82, height: 48)
+//                        }
+//                    }
                 }
                 else  {
                     Color.gray.frame(width: 82, height: 48)
@@ -49,11 +50,11 @@ struct ContentCell: View {
                     VStack(alignment: .leading, spacing: 8) {
                         HStack(spacing: 4) {
                             SecondaryTitle(title: "Population:")
-                            Title(title: country.formatPopulation(country.population ?? 0))
+                            Text(country.formatPopulation(country.population ?? 0))
                         }
                         HStack(spacing: 4){
                             SecondaryTitle(title: "Area:")
-                            Title(title: "\(country.formatNumber(country.area ?? 0)) km²")
+                            Text("\(country.formatNumber(country.area ?? 0)) km²")
                         }
                         HStack(alignment: .top, spacing: 4) {
                             SecondaryTitle(title: "Currencies:")
@@ -87,6 +88,6 @@ struct ContentCell: View {
 
 struct ContentCell_Previews: PreviewProvider {
     static var previews: some View {
-        ContentCell(country: Country.mockData(), isExpanded: true)
+        ContentCell(country: Country.mockData(), isExpanded: false)
     }
 }

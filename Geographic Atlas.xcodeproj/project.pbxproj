@@ -14,12 +14,13 @@
 		64A0D87A2A101EC0008ED17B /* CountriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D8792A101EC0008ED17B /* CountriesList.swift */; };
 		64A0D87C2A101ED4008ED17B /* CountryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D87B2A101ED4008ED17B /* CountryDetails.swift */; };
 		64A0D87E2A101EEA008ED17B /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D87D2A101EEA008ED17B /* ContentCell.swift */; };
-		64A0D8802A101F08008ED17B /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D87F2A101F08008ED17B /* Title.swift */; };
 		64A0D8822A101F19008ED17B /* SecondaryTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D8812A101F19008ED17B /* SecondaryTitle.swift */; };
 		64A0D8862A101F46008ED17B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D8852A101F46008ED17B /* NetworkManager.swift */; };
 		64A0D8882A101F58008ED17B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D8872A101F58008ED17B /* APIError.swift */; };
 		64A0D88A2A101F6A008ED17B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D8892A101F6A008ED17B /* APIService.swift */; };
 		64A0D88E2A1020B8008ED17B /* CountryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D88D2A1020B8008ED17B /* CountryDetailCell.swift */; };
+		64A0D8902A115069008ED17B /* ImageLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D88F2A115069008ED17B /* ImageLoadingView.swift */; };
+		64A0D8922A115081008ED17B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D8912A115081008ED17B /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +32,13 @@
 		64A0D8792A101EC0008ED17B /* CountriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesList.swift; sourceTree = "<group>"; };
 		64A0D87B2A101ED4008ED17B /* CountryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetails.swift; sourceTree = "<group>"; };
 		64A0D87D2A101EEA008ED17B /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
-		64A0D87F2A101F08008ED17B /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		64A0D8812A101F19008ED17B /* SecondaryTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTitle.swift; sourceTree = "<group>"; };
 		64A0D8852A101F46008ED17B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		64A0D8872A101F58008ED17B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		64A0D8892A101F6A008ED17B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		64A0D88D2A1020B8008ED17B /* CountryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailCell.swift; sourceTree = "<group>"; };
+		64A0D88F2A115069008ED17B /* ImageLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingView.swift; sourceTree = "<group>"; };
+		64A0D8912A115081008ED17B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				64A0D8652A101E3A008ED17B /* Geographic_AtlasApp.swift */,
-				64A0D8732A101E67008ED17B /* Network */,
+				64A0D8732A101E67008ED17B /* Networking */,
 				64A0D8762A101E98008ED17B /* Model */,
-				64A0D8742A101E85008ED17B /* Views */,
+				64A0D8742A101E85008ED17B /* View */,
 				64A0D8752A101E89008ED17B /* Components */,
 				64A0D8692A101E3C008ED17B /* Assets.xcassets */,
 				64A0D86B2A101E3C008ED17B /* Preview Content */,
@@ -88,30 +90,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		64A0D8732A101E67008ED17B /* Network */ = {
+		64A0D8732A101E67008ED17B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				64A0D8852A101F46008ED17B /* NetworkManager.swift */,
 				64A0D8872A101F58008ED17B /* APIError.swift */,
 				64A0D8892A101F6A008ED17B /* APIService.swift */,
+				64A0D8912A115081008ED17B /* ImageLoader.swift */,
 			);
-			path = Network;
+			path = Networking;
 			sourceTree = "<group>";
 		};
-		64A0D8742A101E85008ED17B /* Views */ = {
+		64A0D8742A101E85008ED17B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				64A0D8792A101EC0008ED17B /* CountriesList.swift */,
 				64A0D87B2A101ED4008ED17B /* CountryDetails.swift */,
+				64A0D88F2A115069008ED17B /* ImageLoadingView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		64A0D8752A101E89008ED17B /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				64A0D87D2A101EEA008ED17B /* ContentCell.swift */,
-				64A0D87F2A101F08008ED17B /* Title.swift */,
 				64A0D8812A101F19008ED17B /* SecondaryTitle.swift */,
 				64A0D88D2A1020B8008ED17B /* CountryDetailCell.swift */,
 			);
@@ -198,11 +201,12 @@
 			files = (
 				64A0D88E2A1020B8008ED17B /* CountryDetailCell.swift in Sources */,
 				64A0D8822A101F19008ED17B /* SecondaryTitle.swift in Sources */,
+				64A0D8922A115081008ED17B /* ImageLoader.swift in Sources */,
 				64A0D8862A101F46008ED17B /* NetworkManager.swift in Sources */,
 				64A0D8782A101EA6008ED17B /* Country.swift in Sources */,
-				64A0D8802A101F08008ED17B /* Title.swift in Sources */,
 				64A0D87A2A101EC0008ED17B /* CountriesList.swift in Sources */,
 				64A0D87E2A101EEA008ED17B /* ContentCell.swift in Sources */,
+				64A0D8902A115069008ED17B /* ImageLoadingView.swift in Sources */,
 				64A0D8662A101E3A008ED17B /* Geographic_AtlasApp.swift in Sources */,
 				64A0D87C2A101ED4008ED17B /* CountryDetails.swift in Sources */,
 				64A0D88A2A101F6A008ED17B /* APIService.swift in Sources */,
@@ -338,21 +342,24 @@
 				DEVELOPMENT_TEAM = JF9DY65G2M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Geographic atlas";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "meru.Geographic-Atlas";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.meruyert.geographic-atlas";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -367,21 +374,24 @@
 				DEVELOPMENT_TEAM = JF9DY65G2M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Geographic atlas";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "meru.Geographic-Atlas";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.meruyert.geographic-atlas";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

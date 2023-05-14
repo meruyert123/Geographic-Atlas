@@ -25,7 +25,7 @@ struct CountriesList: View {
                                 }
                                 .padding(.horizontal, 12)
                                 .padding(.vertical, 12)
-                                .background(Color("cellColor"))
+                                .background(Color("CellColor"))
                                 .cornerRadius(12)
                                 .padding(.horizontal, 16)
                         }

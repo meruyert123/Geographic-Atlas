@@ -10,9 +10,15 @@ struct CountryDetails: View {
         _viewModel = StateObject(wrappedValue: NetworkManager(cca2Code: cca2))
     }
     
-    var btnBack : some View { Button(action: {
-        self.presentationMode.wrappedValue.dismiss()
-    }) { HStack { Image(systemName: "chevron.left") }}}
+    var btnBack : some View {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.left")
+            }
+        }
+    }
     
     var body: some View {
         
