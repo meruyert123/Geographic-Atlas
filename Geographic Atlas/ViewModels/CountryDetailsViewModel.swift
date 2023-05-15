@@ -24,4 +24,8 @@ class CountryDetailsViewModel: ObservableObject {
             }
         }
     }
+    
+    func onUnmount() {
+        self.country = nil
+    }
 }

@@ -74,6 +74,9 @@ struct CountryDetails: View {
         .onAppear {
             viewModel.onMount(cca2Code: cca2)
         }
+        .onDisappear {
+            viewModel.onUnmount()
+        }
     }
 }
 
