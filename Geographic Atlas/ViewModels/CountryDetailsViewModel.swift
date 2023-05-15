@@ -10,6 +10,8 @@ class CountryDetailsViewModel: ObservableObject {
         let apiService = APIService()
         let fullPath = path + cca2Code
         let url = URL(string: fullPath)
+        
+        error = nil
 
         apiService.fetchCountryDetail(url: url) { [weak self] result in
             guard let self = self else { return }

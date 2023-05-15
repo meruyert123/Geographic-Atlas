@@ -63,6 +63,10 @@ struct CountryDetails: View {
                     }
                     .padding(.horizontal, 16)
                     .navigationTitle(country.name?.common ?? "")
+                } else if viewModel.error == nil {
+                    ProgressView()
+                } else {
+                    Text("Ошибка")
                 }
             }
         }

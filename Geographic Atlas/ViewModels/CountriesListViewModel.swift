@@ -9,6 +9,8 @@ class CountriesListViewModel: ObservableObject {
     
     func onMount() {
         let url = URL(string: url)
+        
+        error = nil
 
         apiService.fetchCountries(url: url) { [weak self] result in
             guard let self = self else {
