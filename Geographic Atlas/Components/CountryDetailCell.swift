@@ -40,6 +40,11 @@ struct CountryDetailCell: View {
 
 struct CountryDetailCell_Previews: PreviewProvider {
     static var previews: some View {
-        CountryDetailCell(title: "Population", detail: "12345", detailArray: nil)
+        ScrollView {
+            VStack(alignment: .leading) {
+                CountryDetailCell(title: "Population", detail: "12345", detailArray: nil)
+                CountryDetailCell(title: "Population", detail: "12345", detailArray: nil)
+            }
+        }
     }
 }
