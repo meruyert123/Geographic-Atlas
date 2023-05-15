@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641F00002A12877200D2161A /* CountriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641FFFFF2A12877200D2161A /* CountriesListViewModel.swift */; };
 		64A0D8662A101E3A008ED17B /* Geographic_AtlasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0D8652A101E3A008ED17B /* Geographic_AtlasApp.swift */; };
 		64A0D86A2A101E3C008ED17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A0D8692A101E3C008ED17B /* Assets.xcassets */; };
 		64A0D86D2A101E3C008ED17B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A0D86C2A101E3C008ED17B /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		641FFFFF2A12877200D2161A /* CountriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewModel.swift; sourceTree = "<group>"; };
 		64A0D8622A101E3A008ED17B /* Geographic Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geographic Atlas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A0D8652A101E3A008ED17B /* Geographic_AtlasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geographic_AtlasApp.swift; sourceTree = "<group>"; };
 		64A0D8692A101E3C008ED17B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		641F00042A1293D300D2161A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				641FFFFF2A12877200D2161A /* CountriesListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		64A0D8592A101E3A008ED17B = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				64A0D8652A101E3A008ED17B /* Geographic_AtlasApp.swift */,
+				641F00042A1293D300D2161A /* ViewModels */,
 				64A0D8732A101E67008ED17B /* Data */,
 				64A0D8762A101E98008ED17B /* Models */,
 				64A0D8742A101E85008ED17B /* Views */,
@@ -210,6 +221,7 @@
 				64A0D8662A101E3A008ED17B /* Geographic_AtlasApp.swift in Sources */,
 				64A0D87C2A101ED4008ED17B /* CountryDetails.swift in Sources */,
 				64A0D88A2A101F6A008ED17B /* APIService.swift in Sources */,
+				641F00002A12877200D2161A /* CountriesListViewModel.swift in Sources */,
 				64A0D8882A101F58008ED17B /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

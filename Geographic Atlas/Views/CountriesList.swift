@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CountriesList: View {
-    @StateObject private var viewModel = NetworkManager()
+    @EnvironmentObject var viewModel: CountriesListViewModel
     @State private var selectedCells: Set<Country> = []
     
     var body: some View {
@@ -26,7 +26,6 @@ struct CountriesList: View {
                                             self.selectedCells.insert(country)
                                         }
                                     }
-                                    
                                 }
                                 .animation(
                                     .easeIn,
@@ -45,6 +44,9 @@ struct CountriesList: View {
             .navigationBarTitleDisplayMode(.inline)
             .frame(maxWidth: .infinity)
         }
+        .onAppear {
+            viewModel.onMount()
+        }
     }
 }
 
@@ -59,6 +61,7 @@ struct ScrollCell: ViewModifier {
 struct CountriesList_Previews: PreviewProvider {
     static var previews: some View {
         CountriesList()
+            .environmentObject(CountriesListViewModel())
     }
 }
 
