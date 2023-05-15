@@ -8,8 +8,8 @@ struct CountryDetails: View {
     init(cca2: String?) {
         self.cca2 = cca2
     }
-    
-    var btnBack : some View {
+
+    var backButton : some View {
         Button(action: {
             self.presentationMode.wrappedValue.dismiss()
         }) {
@@ -63,16 +63,15 @@ struct CountryDetails: View {
                     }
                     .padding(.horizontal, 16)
                     .navigationTitle(country.name?.common ?? "")
-                    .navigationBarBackButtonHidden(true)
-                    .navigationBarItems(leading: btnBack)
-                }
-                else {
-                    Color.gray
                 }
             }
         }
+        .navigationBarBackButtonHidden()
+        .navigationBarItems(leading: backButton)
         .onAppear {
-            viewModel.onMount(cca2Code: cca2)
+            if cca2 != nil {
+                viewModel.onMount(cca2Code: cca2!)
+            }
         }
         .onDisappear {
             viewModel.onUnmount()

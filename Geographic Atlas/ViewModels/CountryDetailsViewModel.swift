@@ -6,9 +6,9 @@ class CountryDetailsViewModel: ObservableObject {
     
     private let path = "https://restcountries.com/v3.1/alpha/"
     
-    func onMount(cca2Code: String?) {
+    func onMount(cca2Code: String) {
         let apiService = APIService()
-        let fullPath = path + (cca2Code ?? "XK")
+        let fullPath = path + cca2Code
         let url = URL(string: fullPath)
 
         apiService.fetchCountryDetail(url: url) { [weak self] result in
