@@ -42,6 +42,7 @@ struct CountriesList: View {
             }
             .navigationBarTitle("World Countries")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
             .frame(maxWidth: .infinity)
         }
         .onAppear {
