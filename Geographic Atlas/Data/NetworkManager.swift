@@ -48,11 +48,6 @@ class NetworkManager: ObservableObject {
             }
         }
     }
-    
-    static func successState() -> NetworkManager {
-        let fetcher = NetworkManager()
-        return fetcher
-    }
 }
 
 extension NetworkManager {

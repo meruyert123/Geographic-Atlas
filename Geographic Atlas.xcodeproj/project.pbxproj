@@ -72,9 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				64A0D8652A101E3A008ED17B /* Geographic_AtlasApp.swift */,
-				64A0D8732A101E67008ED17B /* Networking */,
-				64A0D8762A101E98008ED17B /* Model */,
-				64A0D8742A101E85008ED17B /* View */,
+				64A0D8732A101E67008ED17B /* Data */,
+				64A0D8762A101E98008ED17B /* Models */,
+				64A0D8742A101E85008ED17B /* Views */,
 				64A0D8752A101E89008ED17B /* Components */,
 				64A0D8692A101E3C008ED17B /* Assets.xcassets */,
 				64A0D86B2A101E3C008ED17B /* Preview Content */,
@@ -90,7 +90,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		64A0D8732A101E67008ED17B /* Networking */ = {
+		64A0D8732A101E67008ED17B /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				64A0D8852A101F46008ED17B /* NetworkManager.swift */,
@@ -98,17 +98,17 @@
 				64A0D8892A101F6A008ED17B /* APIService.swift */,
 				64A0D8912A115081008ED17B /* ImageLoader.swift */,
 			);
-			path = Networking;
+			path = Data;
 			sourceTree = "<group>";
 		};
-		64A0D8742A101E85008ED17B /* View */ = {
+		64A0D8742A101E85008ED17B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				64A0D8792A101EC0008ED17B /* CountriesList.swift */,
 				64A0D87B2A101ED4008ED17B /* CountryDetails.swift */,
 				64A0D88F2A115069008ED17B /* ImageLoadingView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		64A0D8752A101E89008ED17B /* Components */ = {
@@ -121,12 +121,12 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		64A0D8762A101E98008ED17B /* Model */ = {
+		64A0D8762A101E98008ED17B /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				64A0D8772A101EA6008ED17B /* Country.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

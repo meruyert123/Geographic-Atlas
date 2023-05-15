@@ -13,16 +13,25 @@ struct CountriesList: View {
                         Spacer()
                     }.padding(.leading, 16)) {
                         ForEach(viewModel.countriesByContinent[continent]!) { country in
-                            ContentCell(country: country, isExpanded: self.selectedCells.contains(country))
+                            ContentCell(
+                                country: country,
+                                isExpanded: self.selectedCells.contains(country)
+                            )
                                 .modifier(ScrollCell())
                                 .onTapGesture {
-                                    if self.selectedCells.contains(country) {
-                                        self.selectedCells.remove(country)
+                                    withAnimation {
+                                        if self.selectedCells.contains(country) {
+                                            self.selectedCells.remove(country)
+                                        } else {
+                                            self.selectedCells.insert(country)
+                                        }
                                     }
-                                    else {
-                                        self.selectedCells.insert(country)
-                                    }
+                                    
                                 }
+                                .animation(
+                                    .easeIn,
+                                    value: self.selectedCells.contains(country)
+                                )
                                 .padding(.horizontal, 12)
                                 .padding(.vertical, 12)
                                 .background(Color("CellColor"))

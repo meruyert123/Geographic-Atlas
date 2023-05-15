@@ -10,23 +10,6 @@ struct ContentCell: View {
             HStack {
                 if country.flags?.png != nil {
                     ImageLoadingView(url: country.flags!.png)
-//                    AsyncImage(url: URL(string: country.flags!.png)) { phase in
-//                        if let image = phase.image {
-//                            image.resizable()
-//                                .scaledToFill()
-//                                .cornerRadius(8)
-//                                .frame(width: 82, height: 48)
-//                                .clipped()
-//                        }
-//                        else if phase.error != nil {
-//                            Color.red
-//                        }
-//                        else {
-//                            ProgressView()
-//                                .cornerRadius(8)
-//                                .frame(width: 82, height: 48)
-//                        }
-//                    }
                 }
                 else  {
                     Color.gray.frame(width: 82, height: 48)
