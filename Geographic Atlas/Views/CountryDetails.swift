@@ -2,12 +2,11 @@ import SwiftUI
 
 struct CountryDetails: View {
     let cca2: String?
-    @StateObject private var viewModel: NetworkManager
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var viewModel: CountryDetailsViewModel
     
     init(cca2: String?) {
         self.cca2 = cca2
-        _viewModel = StateObject(wrappedValue: NetworkManager(cca2Code: cca2))
     }
     
     var btnBack : some View {
@@ -21,10 +20,9 @@ struct CountryDetails: View {
     }
     
     var body: some View {
-        
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
-                if let country = viewModel.countryDetail?.first {
+                if let country = viewModel.country?.first {
                     if country.flags?.png != nil {
                         AsyncImage(url: URL(string: country.flags!.png)) { phase in
                             if let image = phase.image {
@@ -73,11 +71,15 @@ struct CountryDetails: View {
                 }
             }
         }
+        .onAppear {
+            viewModel.onMount(cca2Code: cca2)
+        }
     }
 }
 
 struct CountryDetails_Previews: PreviewProvider {
     static var previews: some View {
         CountryDetails(cca2: "CN")
+            .environmentObject(CountryDetailsViewModel())
     }
 }
