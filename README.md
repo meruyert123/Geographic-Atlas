@@ -34,29 +34,6 @@ This project follows the MVVM (Model-View-ViewModel) architecture pattern. The M
 • Data: Handles data retrieval, storage, and manipulation. This layer may include services, repositories, or APIs for managing data operations.
 
 • View Models: Acts as intermediaries between the views and the data. View models expose data and methods that views can bind to and interact with. They retrieve data from the data layer, perform any required transformations or computations, and update the views accordingly.
-## Structure
-├── Models/
-│   └── Country.swift
-│
-├── Views/
-│   ├── CountriesList.swift
-│   ├── CountryDetails.swift
-│   └── ImageLoadingView.swift
-│
-├── Components/
-│   ├── ContentCell.swift
-│   ├── SecondaryTitle.swift
-│   ├── CountryDetailCell
-│   └── OpenStreetMapCountryDetailCell.swift
-│
-├── Data/
-│   ├── APIError.swift
-│   ├── APIService.swift
-│   └── ImageLoader.swift
-│
-└── ViewModels/
-    ├── CountriesListViewModel.swift
-    └── CountryDetailsViewModel.swift
 
 
 ## Advanced
