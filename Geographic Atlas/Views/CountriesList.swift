@@ -7,16 +7,17 @@ struct CountriesList: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(viewModel.countriesByContinent.keys.sorted(by: <), id: \.self) { continent in
-                    Section(header: HStack {
-                        Text(continent.uppercased()).foregroundColor(Color.gray)
-                        Spacer()
-                    }.padding(.leading, 16)) {
-                        ForEach(viewModel.countriesByContinent[continent]!) { country in
-                            ContentCell(
-                                country: country,
-                                isExpanded: self.selectedCells.contains(country)
-                            )
+                if !viewModel.countries.isEmpty {
+                    ForEach(viewModel.countriesByContinent.keys.sorted(by: <), id: \.self) { continent in
+                        Section(header: HStack {
+                            Text(continent.uppercased()).foregroundColor(Color.gray)
+                            Spacer()
+                        }.padding(.leading, 16)) {
+                            ForEach(viewModel.countriesByContinent[continent]!) { country in
+                                ContentCell(
+                                    country: country,
+                                    isExpanded: self.selectedCells.contains(country)
+                                )
                                 .modifier(ScrollCell())
                                 .onTapGesture {
                                     withAnimation {
@@ -36,8 +37,14 @@ struct CountriesList: View {
                                 .background(Color("CellColor"))
                                 .cornerRadius(12)
                                 .padding(.horizontal, 16)
+                            }
                         }
                     }
+                }  else if viewModel.error == nil {
+                    ProgressView()
+                }
+                else {
+                    Text("Something went wrong.")
                 }
             }
             .navigationBarTitle("World Countries")
