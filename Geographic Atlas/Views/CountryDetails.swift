@@ -46,20 +46,20 @@ struct CountryDetails: View {
                     }
                     VStack(alignment: .leading, spacing: 24) {
                         CountryDetailCell(title: "Region:",
-                                          detail: country.subregion ?? "", detailArray: nil)
+                                          detailStr: country.subregion ?? "", detailList: nil)
                         CountryDetailCell(title: "Capital:",
-                                          detail: "\(country.capital?.first ?? "No capital there.")", detailArray: nil)
+                                          detailStr: "\(country.capital?.first ?? "No capital there.")", detailList: nil)
                         let capitalCoordinates = country.convertToDMS(latitude: country.capitalInfo?.latlng?[0] ?? 0, longitude: country.capitalInfo?.latlng?[1] ?? 0)
                         CountryDetailCell(title: "Capital coordinates",
-                                          detail: "\(capitalCoordinates.0), \(capitalCoordinates.1)", detailArray: nil)
+                                          detailStr: "\(capitalCoordinates.0), \(capitalCoordinates.1)", detailList: nil)
                         CountryDetailCell(title: "Population:",
-                                          detail: country.formatPopulation(country.population ?? 0), detailArray: nil)
+                                          detailStr: country.formatPopulation(country.population ?? 0), detailList: nil)
                         CountryDetailCell(title: "Area:",
-                                          detail: "\(country.formatNumber(country.area ?? 0)) km²", detailArray: nil)
+                                          detailStr: "\(country.formatNumber(country.area ?? 0)) km²", detailList: nil)
                         CountryDetailCell(title: "Currency:",
-                                          detail: nil, detailArray: country.getCurrencyList(country: country))
+                                          detailStr: nil, detailList: country.getCurrencyList(country: country))
                         CountryDetailCell(title: "Timezones:",
-                                          detail: nil, detailArray: country.getTimezones(country: country))
+                                          detailStr: nil, detailList: country.getTimezones(country: country))
                     }
                     .padding(.horizontal, 16)
                     .navigationTitle(country.name?.common ?? "")

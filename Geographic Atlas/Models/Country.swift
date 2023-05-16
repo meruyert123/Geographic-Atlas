@@ -148,15 +148,15 @@ extension Country {
     static func mockData() -> Country {
         return Country(name: Country.Name.init(common: "Spain"),
                        capital: ["Madrid"],
-                       population: 12333,
-                       currencies:["AUD": Currency(name: "Australian dollar", symbol: "$"), "TVD": Currency(name: "Tuvaluan dollar", symbol: "$")],
-                       flags: Country.Flags(png: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png"),
+                       population: 47351567,
+                       currencies:["EUR": Currency(name: "Euro", symbol: "€")],
+                       flags: Country.Flags(png: "https://flagcdn.com/w320/es.png"),
                        area: 1888,
                        region: "Europe",
-                       timezones: ["UTC+03:00"],
-                       cca2: "XK",
-                       subregion: "cew",
-                       capitalInfo: Country.CapitalInfo(latlng: [1.0,3.21]),
-                       continents: ["Axia"])
+                       timezones: ["UTC", "UTC+01:00"],
+                       cca2: "ES",
+                       subregion: "Southern Europe",
+                       capitalInfo: Country.CapitalInfo(latlng: [40.4, -3.68]),
+                       continents: ["Europe"])
     }
 }
