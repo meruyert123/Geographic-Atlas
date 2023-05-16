@@ -46,9 +46,9 @@ struct CountryDetails: View {
                     }
                     VStack(alignment: .leading, spacing: 24) {
                         CountryDetailCell(title: "Region:",
-                                          detailStr: country.subregion ?? "No region there.", detailList: nil)
+                                          detailStr: country.subregion ?? "There is no region.", detailList: nil)
                         CountryDetailCell(title: "Capital:",
-                                          detailStr: "\(country.capital?.first ?? "No capital there.")", detailList: nil)
+                                          detailStr: "\(country.capital?.first ?? "There is no capital.")", detailList: nil)
                         let capitalCoordinates = country.convertToDMS(latitude: country.capitalInfo?.latlng?[0] ?? 0, longitude: country.capitalInfo?.latlng?[1] ?? 0)
                         OpenStreetMapCountryDetailCell(title: "Capital coordinates",
                                                        detailStr: "\(capitalCoordinates.0), \(capitalCoordinates.1)",

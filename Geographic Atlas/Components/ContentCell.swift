@@ -16,13 +16,11 @@ struct ContentCell: View {
                         .cornerRadius(8)
                 }
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(country.name?.common ?? "No")
+                    Text(country.name?.common ?? "There is no country name.")
                         .font(.headline)
-                    ForEach(country.capital ?? [], id: \.self) { capital in
-                        Text(capital)
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                    }
+                    Text(country.capital?.first ?? "There is no capital.")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
                 }
                 Spacer()
                 Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
