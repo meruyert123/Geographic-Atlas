@@ -53,7 +53,6 @@ struct APIService {
                 completion(.success(country))
             } catch {
                 completion(.failure(.parsing(error as? DecodingError)))
-                print(error)
             }
         })
         task.resume()

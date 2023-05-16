@@ -19,7 +19,6 @@ class CountryDetailsViewModel: ObservableObject {
                 switch result {
                 case .failure(let error):
                     self.error = error
-                    print(error)
                 case .success(let data):
                     self.country = data
                 }

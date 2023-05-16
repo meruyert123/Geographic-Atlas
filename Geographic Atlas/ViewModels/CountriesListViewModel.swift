@@ -21,7 +21,6 @@ class CountriesListViewModel: ObservableObject {
                 switch result {
                 case .failure(let error):
                     self.error = error
-                    print(error)
                 case .success(let countries):
                     self.countries = countries
                 }

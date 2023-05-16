@@ -14,6 +14,7 @@ struct Country: Codable, Identifiable, Hashable  {
     let subregion: String?
     let capitalInfo: CapitalInfo?
     let continents: [String]?
+    let maps: Maps?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -28,6 +29,7 @@ struct Country: Codable, Identifiable, Hashable  {
         case subregion
         case capitalInfo
         case continents
+        case maps
     }
     
     struct Flags: Codable, Hashable {
@@ -45,6 +47,10 @@ struct Country: Codable, Identifiable, Hashable  {
     struct Currency: Codable, Hashable {
         let name: String?
         let symbol: String?
+    }
+    
+    struct Maps: Codable, Hashable {
+        let openStreetMaps: String?
     }
     
     func hash(into hasher: inout Hasher) {
@@ -157,6 +163,7 @@ extension Country {
                        cca2: "ES",
                        subregion: "Southern Europe",
                        capitalInfo: Country.CapitalInfo(latlng: [40.4, -3.68]),
-                       continents: ["Europe"])
+                       continents: ["Europe"],
+                       maps: Country.Maps(openStreetMaps: "https://www.openstreetmap.org/relation/1311341"))
     }
 }

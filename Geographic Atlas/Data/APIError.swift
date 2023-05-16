@@ -11,7 +11,7 @@ enum APIError: Error, LocalizedError {
     var errorDescription: String {
         switch self {
         case .invalidURL:
-            return ""
+            return "Invalid URL"
         case .serverError(_):
             return "There was an error with the server. Please try again later"
         case .invalidData:
