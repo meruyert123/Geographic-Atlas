@@ -17,6 +17,7 @@ struct ContentCell: View {
                 }
                 VStack(alignment: .leading, spacing: 4) {
                     Text(country.name?.common ?? "There is no country name.")
+                        .lineLimit(1)
                         .font(.headline)
                     Text(country.capital?.first ?? "There is no capital.")
                         .font(.subheadline)
