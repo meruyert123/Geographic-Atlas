@@ -14,23 +14,23 @@ struct CountryDetailCell: View {
                     .padding(10)
                 Spacer()
             }
-            if let detail = detailStr {
-                VStack(alignment: .leading, spacing: 4) {
-                    SecondaryTitle(title: title)
-                    Text(detail)
-                }
-            }
-            else {
-                if let detailArray = detailList {
+            VStack (alignment: .leading, spacing: 4) {
+                SecondaryTitle(title: title)
+                if let detail = detailStr {
                     VStack(alignment: .leading, spacing: 4) {
-                        SecondaryTitle(title: title)
-                        VStack(spacing: 4) {
-                            ForEach(detailArray, id: \.self) { currency in
-                                VStack(spacing: 4) {
-                                    Text(currency)
-                                }
+                        Text(detail)
+                    }
+                }
+                else {
+                    if let detailList = detailList {
+                        VStack(alignment: .leading, spacing: 4) {
+                            ForEach(detailList, id: \.self) { item in
+                                Text(item)
                             }
                         }
+                    }
+                    else {
+                        Text("No information.")
                     }
                 }
             }
