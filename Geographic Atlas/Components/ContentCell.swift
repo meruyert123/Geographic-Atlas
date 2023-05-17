@@ -40,7 +40,7 @@ struct ContentCell: View {
                         }
                         HStack(alignment: .top, spacing: 4) {
                             SecondaryTitle(title: "Currencies:")
-                            Text("\(country.getCurrencyList(country: country).first ?? "No currency.")")
+                            Text("\(country.getCurrencyList(country: country)?.first ?? "No currency.")")
                                 .lineLimit(1)
                         }
                     }

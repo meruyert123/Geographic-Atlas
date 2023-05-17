@@ -16,22 +16,23 @@ struct CountryDetailCell: View {
             }
             VStack (alignment: .leading, spacing: 4) {
                 SecondaryTitle(title: title)
-                if let detail = detailStr {
+                if let detail = detailStr, !detail.isEmpty {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(detail)
                     }
                 }
-                else {
-                    if let detailList = detailList {
-                        VStack(alignment: .leading, spacing: 4) {
-                            ForEach(detailList, id: \.self) { item in
-                                Text(item)
-                            }
+                else if let detailList = detailList, detailList.isEmpty {
+                    Text("No information.")
+                }
+                else if let detailList = detailList {
+                    VStack(alignment: .leading, spacing: 4) {
+                        ForEach(detailList, id: \.self) { item in
+                            Text(item)
                         }
                     }
-                    else {
-                        Text("No information.")
-                    }
+                }
+                else {
+                    Text("No information.")
                 }
             }
         }
@@ -42,8 +43,9 @@ struct CountryDetailCell_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                CountryDetailCell(title: "Population", detailStr: "12345", detailList: nil)
-                CountryDetailCell(title: "Population", detailStr: "12345", detailList: nil)
+                CountryDetailCell(title: "Population", detailStr: nil, detailList: [])
+                CountryDetailCell(title: "Population", detailStr: nil, detailList: ["EURO"])
+                CountryDetailCell(title: "Population", detailStr: nil, detailList: nil)
             }
         }
     }

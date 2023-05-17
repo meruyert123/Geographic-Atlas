@@ -129,7 +129,7 @@ extension Country {
         return !resultCurrencyList.isEmpty ? resultCurrencyList : []
     }
     
-    func getCurrencyList(country: Country) -> [String] {
+    func getCurrencyList(country: Country) -> [String]? {
         var resultCurrencyList: [String] = []
         if let countryCurrency = country.currencies  {
             for i in countryCurrency {
