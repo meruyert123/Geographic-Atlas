@@ -49,10 +49,19 @@ struct CountryDetails: View {
                                           detailStr: country.subregion ?? "There is no region.", detailList: nil)
                         CountryDetailCell(title: "Capital:",
                                           detailStr: "\(country.capital?.first ?? "There is no capital.")", detailList: nil)
-                        let capitalCoordinates = country.convertToDMS(latitude: country.capitalInfo?.latlng?[0] ?? 0, longitude: country.capitalInfo?.latlng?[1] ?? 0)
-                        OpenStreetMapCountryDetailCell(title: "Capital coordinates",
-                                                       detailStr: "\(capitalCoordinates.0), \(capitalCoordinates.1)",
-                                                       detailUrl: country.maps?.openStreetMaps)
+                        if let capitalInfo = country.capitalInfo?.latlng,
+                           let capitalCoordinates = country.convertToDMS(latitude: capitalInfo[0],
+                                                                         longitude: capitalInfo[1]),
+                           !capitalInfo.isEmpty {
+                            OpenStreetMapCountryDetailCell(title: "Capital coordinates",
+                                                           detailStr: "\(capitalCoordinates.0), \(capitalCoordinates.1)",
+                                                           detailUrl: country.maps?.openStreetMaps)
+                        }
+                        else {
+                            OpenStreetMapCountryDetailCell(title: "Capital coordinates",
+                                                           detailStr: nil,
+                                                           detailUrl: nil)
+                        }
                         CountryDetailCell(title: "Population:",
                                           detailStr: country.formatPopulation(country.population ?? 0), detailList: nil)
                         CountryDetailCell(title: "Area:",
@@ -66,7 +75,7 @@ struct CountryDetails: View {
                 } else if viewModel.error == nil {
                     ProgressView()
                 } else {
-                    Text("Ошибка")
+                    Text("Something went wrong.")
                 }
             }
         }
@@ -85,7 +94,7 @@ struct CountryDetails: View {
 
 struct CountryDetails_Previews: PreviewProvider {
     static var previews: some View {
-        CountryDetails(cca2: "KZ")
+        CountryDetails(cca2: "HM")
             .environmentObject(CountryDetailsViewModel())
     }
 }
