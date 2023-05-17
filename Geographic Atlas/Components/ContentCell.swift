@@ -40,13 +40,7 @@ struct ContentCell: View {
                         }
                         HStack(alignment: .top, spacing: 4) {
                             SecondaryTitle(title: "Currencies:")
-                            VStack(alignment: .leading, spacing: 4) {
-                                ForEach(country.getCurrencyList(country: country), id: \.self) { currency in
-                                    VStack(spacing: 4) {
-                                        Text(currency)
-                                    }
-                                }
-                            }
+                            Text("\(country.getCurrencyList(country: country).first ?? "No currency.")")
                         }
                     }
                     HStack(alignment: .top) {
@@ -72,6 +66,6 @@ struct ContentCell: View {
 
 struct ContentCell_Previews: PreviewProvider {
     static var previews: some View {
-        ContentCell(country: Country.mockData(), isExpanded: false)
+        ContentCell(country: Country.mockData(), isExpanded: true)
     }
 }
