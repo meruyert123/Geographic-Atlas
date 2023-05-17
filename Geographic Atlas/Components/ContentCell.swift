@@ -53,6 +53,7 @@ struct ContentCell: View {
                         } label: {
                             Text("Learn More")
                                 .foregroundColor(.blue)
+                                .fontWeight(.semibold)
                         }
                         Spacer()
                     }
