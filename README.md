@@ -5,6 +5,7 @@ This is an iOS test assignment for the STRONG TEAM Summer Internship. The goal i
 
 ## Application usage
 [Demo Video](https://drive.google.com/drive/folders/1fM9h1mJYIYXQ8Kw3Ngt1sLLDqb6V9NlT?usp=sharing).
+
 You can go through scrollable list of all the world countries grouped by parts of the world.
 Each element in the list able to switch between expanded/collapsed states when the user taps on the element.
 By tapping the “Learn more” button in the expanded element state, screen will provide the detailed information of the currently selected country. 
@@ -25,9 +26,13 @@ $ git clone https://github.com/meruyert123/Geographic-Atlas.git
 This project follows the MVVM (Model-View-ViewModel) architecture pattern. The MVVM pattern separates the user interface (view) from the business logic (view model) and the data (model) to improve code organization, reusability, and testability.
 ### Components
 • Models: Contains the data structures or entities used in the application. These models encapsulate the data and business logic related to them.
+
 • Views: Responsible for presenting the user interface.
+
 • Components: Reusable UI elements or widgets that can be used across different views. 
+
 • Data: Handles data retrieval, storage, and manipulation. This layer may include services, repositories, or APIs for managing data operations.
+
 • View Models: They retrieve data from the data layer, perform any required transformations or computations, and update the views accordingly.
 
 
