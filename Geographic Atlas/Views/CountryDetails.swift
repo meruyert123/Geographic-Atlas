@@ -62,7 +62,6 @@ struct CountryDetails: View {
                         CountryDetailCell(title: "Timezones:",
                                           detailStr: nil, detailList: country.getTimezones(country: country))
                     }
-                    .padding(.horizontal, 16)
                     .navigationTitle(country.name?.common ?? "")
                 } else if viewModel.error == nil {
                     ProgressView()
@@ -86,7 +85,7 @@ struct CountryDetails: View {
 
 struct CountryDetails_Previews: PreviewProvider {
     static var previews: some View {
-        CountryDetails(cca2: "CN")
+        CountryDetails(cca2: "KZ")
             .environmentObject(CountryDetailsViewModel())
     }
 }

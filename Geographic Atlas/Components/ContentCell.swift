@@ -53,6 +53,8 @@ struct ContentCell: View {
                         Spacer()
                         NavigationLink {
                             CountryDetails(cca2: country.cca2 ?? "")
+                                .padding(.top, 16)
+                                .padding(.horizontal, 16)
                         } label: {
                             Text("Learn More")
                                 .foregroundColor(.blue)
