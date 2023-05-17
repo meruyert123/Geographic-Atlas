@@ -42,5 +42,6 @@ This project follows the MVVM (Model-View-ViewModel) architecture pattern. The M
 3. Make the expand/collapse feature for CountriesList animated, with no UI bugs
 4. Add the images caching and reuse them from cache
 5. Use “nice” naming
-6. Write safe code, leave no possibility of crashes
-7. Make the “Capital coordinates” latitude + longitude value on the CountryDetails screen tappable;
+6. Follow MVVM architecture
+7. Write safe code, leave no possibility of crashes
+8. Make the “Capital coordinates” latitude + longitude value on the CountryDetails screen tappable;
